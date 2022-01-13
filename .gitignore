@@ -1,0 +1,9 @@
+.idea/
+node_modules/
+dev/
+dist/
+package-lock.json
+/.env
+/.env.local
+/zip/
+/env.txt

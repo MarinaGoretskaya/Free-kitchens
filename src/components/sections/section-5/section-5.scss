@@ -1,0 +1,50 @@
+.section-5 {
+    padding-top: 130px;
+    padding-bottom: 70px;
+
+    .b-section__bg {
+        background-image: url("../images/jpg/sec-5.jpg");
+    }
+
+    &__col {
+        &:last-child {
+            justify-content: flex-end;
+        }
+
+        .item-right {
+            max-width: 340px;
+        }
+    }
+}
+
+.button-block .button {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+    .section-5 {
+        .item-sec5 {
+            margin-bottom: 20px;
+        }
+
+        &__col:last-child {
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .section-5 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        &__row {
+            flex-direction: column;
+        }
+
+        .button-block .button {
+            margin-bottom: 20px;
+        }
+    }
+}

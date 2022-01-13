@@ -1,0 +1,26 @@
+.slider {
+    .slider-item {
+        //border: 1px solid red;
+
+        &__inner {
+            //border: 1px solid black;
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        &__img-wrap {
+            position: relative;
+        }
+
+        &__img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //border: 1px solid yellow;
+        }
+    }
+}

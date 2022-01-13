@@ -1,0 +1,118 @@
+.reviews {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__supertitle {
+        color: #2F80ED;
+        margin-bottom: 30px;
+    }
+
+    &__descr {
+        color: #707070;
+        font-weight: 600;
+        margin-top: 39px;
+        max-width: 980px;
+    }
+
+}
+
+.reviews__row {
+    margin-top: 35px;
+    margin-bottom: 29px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reviews-item {
+    padding: 40px 30px;
+
+    &__inner {
+
+    }
+
+    &__img-wrap {
+        position: relative;
+        max-width: 295px;
+        min-width: 200px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: -36px;
+        left: -36px;
+        z-index: 100;
+        @include size(70px, 70px);
+        background-color: #fff;
+        border-radius: 35px;
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 36px;
+        }
+    }
+
+    &__text-wrap {
+        padding: 20px;
+        text-align: center;
+        @include font_size-line(16px, 26px);
+        color: #151515;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+
+    &__img-hover {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #FEE040 0%, #2F80ED 100%);
+        cursor: pointer;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+    }
+
+    &__img {
+        position: relative;
+
+        &:hover .reviews-item__img-hover {
+            opacity: 0.5;
+            transition: opacity 1s ease-out;
+        }
+    }
+}
+
+.button-block {
+    justify-content: center;
+
+    .button {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews-item {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}

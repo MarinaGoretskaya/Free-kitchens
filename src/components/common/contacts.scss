@@ -1,0 +1,32 @@
+.contacts {
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+
+    &-item {
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        color: #151515;
+        margin-right: 9.5px;
+        @include size(10px, 7.5px);
+    }
+
+    &__info a, &__info {
+        @include font_size-line(18px, 22px);
+        color: #151515;
+        font-weight: bold;
+    }
+
+    &__info {
+        margin-top: 7px;
+    }
+
+    &__text {
+        text-align: left;
+        opacity: .5;
+        @include font_size-line(12px, 12px);
+    }
+}

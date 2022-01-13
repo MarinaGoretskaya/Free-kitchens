@@ -1,0 +1,11 @@
+@import '../../mixins/sass/font-face';
+
+
+@include fontFace('Gilroy', '../fonts/Gilroy/Gilroy-Extrabold', 800, 'normal');
+
+@include fontFace('Proxima Nova', '../fonts/Proxima-Nova/ProximaNova-Regular', 'normal', 'normal');
+@include fontFace('Proxima Nova', '../fonts/Proxima-Nova/ProximaNova-Semibold', 600, 'normal');
+@include fontFace('Proxima Nova', '../fonts/Proxima-Nova/ProximaNova-RegularIt', 'normal', 'italic');
+@include fontFace('Proxima Nova', '../fonts/Proxima-Nova/ProximaNova-Bold', 'bold', 'normal');
+
+@include fontFace('Bebas Neue', '../fonts/Bebas-Neue/BebasNeueBold', 'bold', 'normal');
