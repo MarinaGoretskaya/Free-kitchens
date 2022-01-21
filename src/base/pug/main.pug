@@ -1,7 +1,7 @@
 include ../../mixins/pug/svg-icon
 
 block variables
-    - var title = "Diagnostics"
+    - var title = "Свободные кухни"
 
 doctype html
 html(lang="ru-RU")
@@ -15,17 +15,18 @@ html(lang="ru-RU")
 
             main.g-main
                 .container
-                    block section-1
-                    block section-2
-                    block section-3
-                    block section-4
-                    block section-5
-                    block section-6
-                    block section-7
-                    block section-8
-                    block section-9
+                    block sec1
+                    block sec2
+                    block sec3
+                    block sec4
+                    block sec5
+                    block sec6
+                    block sec7
+                    block sec8
 
             include ../../components/footer/footer
+
+        include ../../components/popup/popup
 
 
         //.d-none
@@ -36,6 +37,9 @@ html(lang="ru-RU")
 
 
         script(src="static/js/vendors/jquery-3.6.0.min.js")
+        //script(src="static/js/vendors/svg4everybody.min.js")
+        //script(src="static/js/vendors/svg4everybody.legacy.min.js")
+        //script(src="static/js/vendors/svgxuse.js")
         script(src="static/js/vendors/libs.js")
         script(src="static/js/main.js")
 

@@ -14,6 +14,7 @@ const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
 const concat = require('gulp-concat');
 const gulpIf = require('gulp-if');
+const gulpRigger = require('gulp-rigger');
 const browserSync = require('browser-sync').create();
 
 let isBuildFlag = false;
@@ -54,7 +55,9 @@ function scssToCss() {
 function script() {
     return gulp.src('src/components/**/*.js')
         .pipe(gulpBabel({
-            presets: ['@babel/env']
+            // presets: ['@babel/env']
+            // presets: ['@babel/preset-env']
+            plugins: ['@babel/transform-runtime']
         }))
         .pipe(gulpIf(isBuildFlag, gulpUglify()))
         .pipe(concat('main.js'))
@@ -65,6 +68,12 @@ function script() {
 function copyJQuery() {
     return gulp.src('src/base/js/vendors/jquery-3.6.0.min.js')
         .pipe(gulp.dest('dist/static/js/vendors/'))
+}
+
+function rigger() {
+    return gulp.src('src/*.php')
+        .pipe(gulpRigger())
+        .pipe(gulp.dest('dist/'))
 }
 
 function vendors() {
@@ -120,6 +129,7 @@ function svgSpriteBuild() {
         .pipe(gulp.dest('dist/static/images/sprite'));
 }
 
+
 function setMode(isBuild) {
    return cb => {
        isBuildFlag = isBuild;
@@ -142,7 +152,7 @@ function watch() {
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 }
 
-const dev = gulp.parallel(fonts, pugToHtml, scssToCss, imgMin, svgSpriteBuild, script, copyJQuery, vendors);
+const dev = gulp.parallel(fonts, pugToHtml, scssToCss, imgMin, svgSpriteBuild, script, copyJQuery, rigger, vendors);
 
 exports.default = gulp.series(clean, dev, watch);
 exports.build = gulp.series(clean, setMode(true), dev);

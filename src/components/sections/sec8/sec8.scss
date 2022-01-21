@@ -1,0 +1,221 @@
+.reviews {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .b-sec__bg_half-bg {
+        background-color: #939B4A;
+
+        &:after {
+            background-color: #F1F3E4;
+        }
+    }
+
+    .b-sec__bg_half-bg-2 {
+        background-color: #F1F3E4;
+        display: none;
+    }
+
+    h2 {
+        margin-bottom: 36px;
+    }
+
+    &__descr {
+        color: #EAECD5;
+    }
+
+    .sec__row {
+        justify-content: inherit;
+        align-items: center;
+    }
+
+    &__col {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        text-align: center;
+    }
+
+    .col2__inner {
+        text-align: left;
+    }
+
+
+
+    &__col:nth-child(2) {
+
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        max-width: inherit;
+
+        .reviews__wrapper {
+            background-color: #fff;
+        }
+
+        .blockquote__row {
+            text-align: right;
+
+            .img-blockquote {
+                padding: 40px 33px 28px;
+            }
+        }
+
+    }
+}
+
+.reviews__slider {
+    .arrow {
+        top: auto;
+        bottom: 48px;
+        background: transparent;
+        box-shadow: none;
+        left: auto;
+        right: 0;
+
+        &:before {
+            background-image: url("../images/svg/arrow-dark-sl.svg");
+        }
+
+        &-prev {
+            right: 40px;
+        }
+
+        &-next {
+            right: 0px;
+        }
+    }
+}
+
+.review {
+    img {
+        width: 56px;
+        height: 56px;
+        margin-right: 16px;
+    }
+
+    &__row {
+        margin-bottom: 24px;
+    }
+
+    &__name {
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        color: #101828;
+        font-weight: 700;
+    }
+
+    &__person-descr {
+        font-size: 14px;
+        line-height: 20px;
+        color: #667085;
+    }
+
+    &__text {
+        color: #344054;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 120px;
+    }
+}
+
+
+
+@media (max-width: 1440px) {
+    .reviews__col:nth-child(2) {
+        .col2__inner {
+            padding-left: 120px;
+            padding-right: 100px;
+        }
+
+        .blockquote__row {
+            .img-blockquote {
+                padding: 26px 23.61px 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .reviews__col:nth-child(2) {
+        .col2__inner {
+            padding-left: 100px;
+            padding-right: 91px;
+        }
+
+        .blockquote__row {
+            .img-blockquote {
+                padding: 40px 22px 24px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+    .reviews__col:nth-child(2) {
+        .col2__inner {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        .b-sec__bg_half-bg:after {
+            display: none;
+        }
+
+        .b-sec__bg_half-bg-2 {
+            display: block;
+        }
+
+        &__col:nth-child(2) {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .reviews__wrapper {
+                margin-bottom: 23px;
+                margin-left: -20px;
+                //margin-right: -10px;
+                padding-left: 20px;
+                //padding-right: 10px;
+            }
+
+            .col2__inner {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .blockquote__row {
+                .img-blockquote {
+                    padding: 26px 24px 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews__col:nth-child(2) {
+        .reviews__wrapper {
+            margin-bottom: 16px;
+            margin-left: -10px;
+            padding-left: 10px;
+        }
+
+        .blockquote__row {
+            .img-blockquote {
+                padding: 24px 29px 12px;
+
+                img {
+                    width: 56px;
+
+                }
+            }
+        }
+    }
+}

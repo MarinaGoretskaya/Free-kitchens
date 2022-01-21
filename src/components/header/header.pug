@@ -1,38 +1,53 @@
 header.header
-    .b-section__bg
+    .b-sec__bg.b-sec__bg_darkgray
     .container
         .header__row.flex
-            .header__col
-                .logo-block
-                    a.menu-botton(href="index.html")
-                        img(src="static/images/png/burger.png")
-                    .menu(style="display: none;")
-                        ul#accordeon.menu__inner
-                            li.menu__item
-                                a.menu__link(href="index.html") Бизнес
-                            li.menu__item
-                                a.menu__link(href="#") О нас
-                            li.menu__item
-                                a.menu__link(href="#") Цены
-                            li.menu__item
-                                a.menu__link(href="#") Оформить заказ
+            .header__col.header-left
+                a.logo-title(href="index.html") Свободные<br>кухни
+                .menu
+                    ul#accordeon.menu__list.desk-menu__list
+                        li.menu__item.desk-menu__item
+                            a.menu__link.desk-menu__link(href="#a-top") О проекте
+                        li.menu__item.desk-menu__item
+                            a.menu__link.desk-menu__link.popup-open(href="#modal") Выбрать кухню
+                        li.menu__item.desk-menu__item
+                            a.menu__link.desk-menu__link.popup-open(href="#modal") Добавить кухню
+                        li.menu__item.desk-menu__item
+                            a.menu__link.desk-menu__link(href="#a-footer") Контакты
 
-                    a.logo(href="index.html")
-                        img(src="static/images/png/logo.png" alt="logo")
-            .header__col
-                .contacts.header-contacts
-                    .contacts-item.contacts__email
-                        .contacts__text Пишите нам на&nbsp;email
-                        .contacts__info
-                            +icon("mail")
-                            a(href="mailto: info@diagnistics.by")
-                                span info@diagnistics.by
-                    .contacts-item.contacts__phone
-                        .contacts__text
-                            +icon("phone")
-                            span Есть вопросы? Звоните!
-                        .contacts__info
-                            a(href="tel: +375294564545") +375 (29) 456-45-45
+            .header__col.header-right
+                //a(href="#modal").register.reg-desk Регистрация
+                //    +icon("arrow")
+                //
+                //button.button.button_green.button-enter Вход
+
+                button.menu-burger(href="index.html")
+                    span.ico
+
+
+
+                .mob-menu.closed
+                    .mob-menu__wrap
+                        .mob-menu__header
+                            a.mob-menu__title.logo-title(href="index.html") Свободные<br>кухни
+                            button.button.button-close.hamburger-closer
+                                +icon("close")
+                        .mob-menu__body
+                            ul#mob-menu.menu__list.mob-menu__list
+                                li.menu__item.mob-menu__item
+                                    a.menu__link.mob-menu__link(href="#a-top") О проекте
+                                li.menu__item.mob-menu__item
+                                    a.menu__link.mob-menu__link.popup-open(href="#modal") Выбрать кухню
+                                li.menu__item.mob-menu__item
+                                    a.menu__link.mob-menu__link.popup-open(href="#modal") Добавить кухню
+                                li.menu__item.mob-menu__item
+                                    a.menu__link.mob-menu__link(href="#a-footer") Контакты
+                        //.mob-menu__footer
+                        //    a(href="#modal").register.mob-menu__register.reg-mob Регистрация
+                        //        +icon("arrow")
+                        //
+                        //    button.button.button_green.button-enter.mob-menu__button-enter Вход
+
 
 
 

@@ -1,0 +1,16 @@
+//.modal
+#modal.modal-window.mfp-hide
+    .modal-header__row
+        h4.modal__header Заявка
+    .modal__body
+        .descr.modal__descr.
+            Оставьте Ваши контакты и&nbsp;мы перезвоним и&nbsp;расскажем о&nbsp;нас в&nbsp;самое ближайшее время.
+        .form
+            form#form(action="#").form__body
+                .form__item
+                    label.form__label(for="formName") Имя
+                    input#formName.form__input._req(type="text" name="name")
+                .form__item
+                    label.form__label(for="formTel") Телефон
+                    input#formTel.form__input._req._tel(type="tel" name="tel"  placeholder="+375")
+                button.button.button_green.button-send(type="submit") Отправить заявку

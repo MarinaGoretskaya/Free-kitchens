@@ -1,0 +1,122 @@
+.start {
+
+    .b-sec__bg {
+        background-color: #fff;
+    }
+
+    &__body {
+        text-align: center;
+    }
+
+    &__head {
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+
+    h2 {
+        margin-bottom: 48px;
+    }
+
+    &__col:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__item {
+        .item__num {
+            @include size(40px, 40px);
+            min-width: 40px;
+            margin-right: 16px;
+            border-radius: 50%;
+            background-color: #EAECD5;
+            font-family: "Helvetica Neue", sans-serif;
+            font-weight: 700;
+            color: #939B4A;
+            @include font_size-line(20px, 28px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item__descr {
+            text-align: left;
+        }
+
+        .item-text {
+            color: #667085;
+        }
+
+        .item-subtitle {
+            //font-family: "Helvetica Neue", sans-serif;
+            //@include font_size-line(20px, 28px);
+            //font-weight: bold;
+            margin-bottom: 8px;
+            color: #101828;
+        }
+
+        .item-link {
+            color: #939B4A;
+            font-weight: 600;
+            margin-top: 20px;
+            white-space: nowrap;
+        }
+    }
+
+    .video-block {
+        padding-top: 96px;
+
+        &__link {
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            max-width: 792px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .button-play {
+        background: rgba(33, 33, 33, 0.8);
+        position: absolute;
+        width: 68px;
+        height: 48px;
+        border-radius: 10px;
+
+        .icon {
+            width: 18px;
+            height: 20px;
+            color: #fff;
+            margin-right: 0;
+            margin-left: -2px;
+
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .start {
+        &__head {
+            padding-left: 103px;
+            padding-right: 103px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .start {
+        &__head {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@media (max-width: 567px) {
+    .start {
+        .sec__col3:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+}

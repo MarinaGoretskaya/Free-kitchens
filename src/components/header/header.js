@@ -1,5 +1,5 @@
 window.onscroll = function showHeader() {
-    let headerBg = document.querySelector('.header .b-section__bg');
+    let headerBg = document.querySelector('.header .b-sec__bg');
 
     if(window.pageYOffset > 70) {
         headerBg.classList.add('header-scroll');

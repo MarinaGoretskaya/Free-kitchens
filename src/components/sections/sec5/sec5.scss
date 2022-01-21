@@ -1,0 +1,133 @@
+.catalog {
+    color: #fff;
+
+    .b-sec__bg {
+        background-color: #1D2939;
+    }
+}
+
+.catalog__slider {
+    margin-top: 49px;
+
+    .slick-track {
+        display: flex;
+    }
+
+    .arrow {
+        top: 86px;
+    }
+
+    .slider-item {
+        padding: 0 10px;
+        color: #F9FAFB;
+        min-width: 262.83px;
+
+        &__inner {
+            max-width: 400px;
+        }
+
+        &__img {
+            margin-bottom: 30px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            margin-bottom: 8px;
+        }
+
+        &__descr {
+            @include font_size-line(16px, 26px);
+            margin-bottom: 16px;
+            color: #667085;
+            white-space: nowrap;
+
+            & > div {
+                position: relative;
+            }
+
+            & > div:not(:last-child):after {
+                content: '';
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #344054;
+                position: absolute;
+                display: block;
+                top: 11px;
+                right: -11px;
+            }
+
+            & > div:not(:last-child) {
+                margin-right: 16px;
+            }
+
+        }
+
+        &__price {
+            @include font_size-line(16px, 24px);
+
+            .price-bold {
+                font-weight: bold;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .catalog__slider {
+        .slider-item {
+            min-width: 284.75px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .catalog__slider {
+        .slider-item {
+            min-width: 250.25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog__slider {
+        margin-top: 49px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        max-width: 1920px;
+        margin-left: 20px;
+
+        .slider-item {
+            min-width: 284.75px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .catalog {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .catalog__slider {
+        .slider-item {
+            //max-width: 284.75px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .catalog__slider {
+        margin-left: 16px;
+
+        .slider-item {
+            min-width: 284.75px;
+        }
+    }
+
+}

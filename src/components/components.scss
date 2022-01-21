@@ -1,6 +1,5 @@
 @import "common/common";
 @import "common/go-top/go-top";
-@import "common/popup/popup";
 @import "common/gradient-line";
 @import "common/slider";
 @import "common/contacts";
@@ -8,18 +7,20 @@
 @import "common/icon";
 @import "common/button";
 @import "common/list";
-@import "common/b-section";
+@import "common/b-sec";
 @import "common/section";
 
+@import "popup/popup";
+
 @import "header/header";
-@import "sections/section-1/section-1";
-@import "sections/section-2/section-2";
-@import "sections/section-3/section-3";
-@import "sections/section-4/section-4";
-@import "sections/section-5/section-5";
-@import "sections/section-6/section-6";
-@import "sections/section-7/section-7";
-@import "sections/section-8/section-8";
-@import "sections/section-9/section-9";
+@import "sections/sec1/sec1";
+@import "sections/sec2/sec2";
+@import "sections/sec3/sec3";
+@import "sections/sec4/sec4";
+@import "sections/sec5/sec5";
+@import "sections/sec6/sec6";
+@import "sections/sec7/sec7";
+@import "sections/sec8/sec8";
 
 @import "footer/footer";
+

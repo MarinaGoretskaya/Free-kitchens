@@ -1,25 +1,33 @@
 footer.footer
-    .b-section__bg.b-section__bg--white
+    .b-sec__bg.b-sec__bg_darkgray
+    a(name="a-footer")
     .container
         .footer__row.flex
-            .footer__col.copyright 2016-2019 ООО «Инженерная Диагностика»<br> Все права защищены. Бренд упакован Digital Butlers
             .footer__col
-                .contacts.footer-contacts
-                    .contacts-item.contacts__email
-                        .contacts__text
-                            +icon("mail")
-                            span Пишите нам на&nbsp;email
-                        .contacts__info
-                            a(href="mailto: info@idi.by")
-                                span info@idi.by
-                    .contacts-item.contacts__phone
-                        .contacts__text
-                            +icon("phone")
-                            span Есть вопросы? Звоните!
-                        .contacts__info
-                            a(href="tel: +375294564545") +375 (29) 456-45-45
-                    .contacts-item.contacts__address
-                        .contacts__text
-                            +icon("home")
-                            span Заходите в&nbsp;гости
-                        .contacts__info г.&nbsp;Минск, ул.&nbsp;Ленина, д.&nbsp;9, пом.&nbsp;3, оф.&nbsp;10
+                img(src="static/images/png/logo-footer.png" alt="logo")
+                .logo-title Свободные<br>кухни
+
+            .footer__col
+                .menu-soc-wrap.flex
+                    .menu-footer.footer-content
+                        .footer-title Компания
+                        ul.menu-footer__list
+                            li.menu-footer__item
+                                a.menu-footer__link(href="#a-top") О нас
+                            li.menu-footer__item
+                                a.menu-footer__link(href="#a-footer") Контакты
+                            li.menu-footer__item
+                                a.menu-footer__link.popup-open(href="#modal") Помощь
+                    .social-footer.footer-content
+                        .footer-title Социальные сети
+                        .social-footer__item
+                            a.instagram(href="https://www.instagram.com/" target="_blank").flex
+                                .social-footer__icon.flex
+                                    +icon("instagram")
+                                .social-footer__name Instagram
+                        .social-footer__item
+                            a.youtube(href="https://www.youtube.com/" target="_blank").flex
+                                .social-footer__icon.flex
+                                    +icon("youtube")
+                                .social-footer__name Youtube
+                .copyright © 2020 Свободные кухни. All rights reserved

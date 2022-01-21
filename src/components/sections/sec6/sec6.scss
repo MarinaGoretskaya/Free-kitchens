@@ -1,0 +1,139 @@
+.just-cook {
+    color: #fff;
+
+    .b-sec__bg {
+        background-color: #939B4A;
+    }
+
+    h2 {
+        margin-bottom: 36px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        //font-family: "Helvetica Neue", sans-serif;
+        //@include font_size-line(20px, 28px);
+        margin-bottom: 8px;
+        color: #F8F9F2;
+    }
+
+    &__text {
+        color: #DCE0BA;
+    }
+
+    img {
+        //width: 100%;
+    }
+}
+
+.cook-pict {
+    &__col:not(:last-child) {
+        padding-right: 8px;
+    }
+
+    &__wrap {
+        height: 529px;
+        width: 212px;
+        padding: 23px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &.cook-pict__first {
+            background: url(../images/jpg/need-cook1.jpg) no-repeat center;
+            background-size: cover;
+        }
+        &.cook-pict__second {
+            background: url(../images/jpg/need-cook2.jpg) no-repeat center;
+            background-size: cover;
+        }
+        &.cook-pict__third {
+            background: url(../images/jpg/need-cook3.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+    }
+
+    &__title {
+        color: #F1F3E4;
+    }
+
+    &__descr {
+        color: #ffffff;
+    }
+}
+
+
+@media (max-width: 1440px) {
+    .just-cook {
+        .sec__col2:nth-child(2) {
+            .col2__inner {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .just-cook {
+        .sec__col2 {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .just-cook {
+        &__row {
+            flex-direction: column;
+        }
+
+        .sec__col2:first-child {
+            margin-bottom: 32px;
+
+            .col2__inner {
+                max-width: 482px;
+                margin: 0 auto;
+            }
+        }
+        .sec__col2 {
+            width: 100%;
+        }
+
+        .cook-pict__row {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .just-cook {
+        .sec__col2:nth-child(2) {
+            .col2__inner {
+                max-width: inherit;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .just-cook {
+        .sec__col2:nth-child(2) {
+            .col2__inner {
+
+            }
+        }
+        .cook-pict__row {
+            justify-content: left;
+            overflow-x: scroll;
+            width: 100vW;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+}

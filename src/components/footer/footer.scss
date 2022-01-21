@@ -1,42 +1,70 @@
 .footer {
     position: relative;
-    padding-top: 40px;
-    padding-bottom: 20px;
-
-    .copyright {
-        @include font_size-line(12px, 18px);
-        color: #707070;
-    }
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     &__row {
         justify-content: space-between;
     }
 }
 
-.footer-contacts {
-    .contacts__address {
-        .contacts__info {
-            white-space: normal;
+.logo-title {
+    @include font_size-line(32.65px, 27.75px);
+    color: #E4E7EC;
+}
+
+.footer-title {
+    color: #C0C683;
+    @include font_size-line(20px, 28px);
+    margin-bottom: 32px;
+}
+
+.footer-content {
+    color: #E4E7EC;
+    @include font_size-line(16px, 24px);
+}
+
+.menu-footer {
+    margin-right: 70px;
+
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    &__item {
+        margin-bottom: 12px;
+    }
+
+
+}
+
+.social-footer {
+    &__item {
+        margin-bottom: 12px;
+    }
+
+    &__icon {
+        background: #636363;
+        border-radius: 50%;
+        @include size(24px, 24px);
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+
+        .icon {
+            width: 12.8px;
+            margin-right: 0;
+            bottom: 0;
         }
     }
-    //    align-items: flex-start;
-    //
-    //    &__info a, &__info {
-    //        @include font_size-line(18px, 22px);
-    //        color: #151515;
-    //        font-weight: bold;
-    //    }
-    //    &__text {
-    //        text-align: left;
-    //
-    //        .icon {
-    //            color: #151515;
-    //        }
-    //    }
-    //}
-    //.item-contacts {
-    //    margin-left: 20px;
-    //    margin-bottom: 20px;
+}
+
+.copyright {
+    @include font_size-line(14px, 20px);
+    color: #667085;
+    text-align: right;
+    margin-top: 40px;
 }
 
 
@@ -46,5 +74,26 @@
             flex-direction: column;
             align-items: flex-start;
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .footer__row,
+    .menu-soc-wrap {
+        flex-direction: column;
+    }
+
+    .menu-footer {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .social-footer {
+        margin-top: 30px;
+    }
+
+    .copyright {
+        text-align: left;
+        margin-top: 20px;
     }
 }
